@@ -1,0 +1,28 @@
+{
+  "kind": "Deployment",
+  "apiVersion": "apps/v1",
+  "metadata": {
+    "name": "appname",
+    "namespace": "namespace",
+    "labels": {
+      "k8s-app": "appname",
+      "date": "DATE"
+    }
+  },
+  "spec": {
+    "replicas" : "1"
+  },
+  "spec" : {
+    "containers": {
+      "name": "appname",
+      "image": "hub.docker.com/app",
+      "imagePullPolicy": "Always",
+    },
+    "resources": {
+      "limits": {
+        "cpu" : "1",
+        "memory": "512M"
+      }
+    }
+  }
+}

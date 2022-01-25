@@ -1,0 +1,30 @@
+{
+  "kind": "Network",
+  "apiVersion": "apiVersion",
+  "metadata": {
+    "name": "appname",
+    "labels": {
+      "k8s-app": "appname"
+    }
+  },
+  "spec": {
+    "podSelector": {
+      "matchLabels": {
+        "k8s-app": "appname"
+      }
+    },
+    "policyTypes": [
+      "Ingress"
+    ],
+    "Ingress": [
+        {
+          "ports": [
+            {
+              "protocol": "TCP",
+              "port" : "80"
+            }
+          ]
+        }
+      ]
+  }
+}
